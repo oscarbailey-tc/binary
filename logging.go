@@ -24,7 +24,7 @@ import (
 	"go.uber.org/zap"
 )
 
-var zlog = zap.NewNop()
+var zlog, _ = zap.NewDevelopment()
 
 func init() {
 	logging.Register("github.com/gagliardetto/binary", &zlog)
